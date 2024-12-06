@@ -3,82 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phonebooth</title>
+    <title>Phonebooth - Connect Across Discord</title>
     <link rel="icon" href="phonebooth.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --violet-web-color: #F682DD;
+            --deep-sky-blue: #00B7FE;
+            --chefchaouen-blue: #5296F1;
+            --light-cyan: #C5F5FD;
+            --celestial-blue: #009FFE;
+        }
+
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa; /* Light pastel blue */
+            background: linear-gradient(135deg, var(--light-cyan), var(--deep-sky-blue));
             color: #333;
             line-height: 1.6;
         }
+
         header {
-            background-color: #add8e6; /* Light pastel blue */
+            background: linear-gradient(90deg, var(--chefchaouen-blue), var(--celestial-blue));
             color: white;
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
         nav {
-            background-color: #ffffff; /* White */
-            border-bottom: 1px solid #ddd;
-            padding: 10px 0;
+            background-color: rgba(255,255,255,0.9);
+            padding: 15px 0;
             text-align: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
+
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #333;
+            color: var(--chefchaouen-blue);
             padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 600;
         }
+
         nav a:hover {
-            background-color: #ffb6c1; /* Light pastel pink */
+            background-color: var(--violet-web-color);
             color: white;
+            transform: scale(1.05);
         }
+
         main {
-            padding: 20px;
-            max-width: 800px;
+            padding: 40px 20px;
+            max-width: 900px;
             margin: 20px auto;
             background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
-        footer {
-            background-color: #ffb6c1; /* Light pastel pink */
-            color: white;
-            text-align: center;
-            padding: 10px 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+
+        main h2, main h3 {
+            color: var(--chefchaouen-blue);
+            border-bottom: 2px solid var(--deep-sky-blue);
+            padding-bottom: 10px;
         }
-        h1, h2, h3 {
-            margin-top: 0;
-        }
+
         ul {
             list-style-type: none;
             padding: 0;
         }
+
         ul li {
-            padding: 5px 0;
+            padding: 10px;
+            background-color: var(--light-cyan);
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
+
+        ul li:hover {
+            background-color: var(--deep-sky-blue);
+            color: white;
+        }
+
         code {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 2px 4px;
+            background-color: var(--light-cyan);
+            border: 1px solid var(--chefchaouen-blue);
+            padding: 2px 6px;
             border-radius: 4px;
+            color: var(--chefchaouen-blue);
+            font-weight: 600;
+        }
+
+        footer {
+            background: linear-gradient(90deg, var(--violet-web-color), var(--deep-sky-blue));
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Phonebooth</h1>
+        <h1>Phonebooth 📞</h1>
     </header>
     <nav>
         <a href="terms.html">Terms and Conditions</a>
@@ -87,24 +127,30 @@
     </nav>
     <main>
         <h2>Welcome to Phonebooth! 📞</h2>
-        <p>Introducing Phonebooth! 📞 Connect & chat with users across Discord in real-time, seamlessly integrated into your server.</p>
-        <p>🛜 Connect with users from all over Discord without leaving your current server!</p>
-        <p>💬 Real-Time Conversations: Enjoy real-time conversations with new friends and like-minded individuals across Discord.</p>
-        <p>⚠️ Report System: Your safety and well-being matter to us! If someone breaks our guidelines, please report them; we’ll handle the rest.</p>
-        <p>✅ Seamless Integration: Phonebooth effortlessly integrates into your server, allowing you to chat with users from different communities instantly.</p>
-        <p>🎉 Easy to Use: With a user-friendly interface, connecting with others has never been easier. Add Phonebooth to your server today and expand your Discord experience like never before!</p>
-        <h3>Getting started with Phonebooth is super easy. Here’s how:</h3>
+        <p>Introducing Phonebooth! Connect & chat with users across Discord in real-time, seamlessly integrated into your server.</p>
+        
+        <h3>Key Features</h3>
         <ul>
-            <li>Add Phonebooth to Your Server: Visit the Phonebooth website or use the invite link to add the bot to your Discord server.</li>
-            <li>Set Up Your Preferences: Customize your settings to match your server’s needs. You can choose which channels Phonebooth can access.</li>
+            <li>🛜 Cross-Server Connectivity: Connect with users from all over Discord without leaving your current server!</li>
+            <li>💬 Real-Time Conversations: Enjoy instant communication with new friends and like-minded individuals</li>
+            <li>⚠️ Robust Reporting System: Ensuring user safety is our top priority</li>
+            <li>✅ Seamless Integration: Effortlessly add to your server and start connecting</li>
+            <li>🎉 User-Friendly Interface: Simple, intuitive, and easy to use</li>
         </ul>
-        <h3>Here are the commands to get you started!</h3>
+
+        <h3>Getting Started is Simple</h3>
         <ul>
-            <li>To set up the bot, use <code>c. config</code></li>
-            <li>The current prefix for the bot is <code>c.</code></li>
-            <li>You can change the prefix with <code>c. setprefix</code></li>
+            <li>Add Phonebooth to Your Server: Visit our website or use the invite link</li>
+            <li>Set Up Your Preferences: Customize settings to match your server's needs</li>
         </ul>
-        <p>Shortcuts for commands:</p>
+
+        <h3>Quick Commands</h3>
+        <ul>
+            <li><code>c. config</code> to set up the bot</li>
+            <li><code>c. setprefix</code> to change the bot's prefix</li>
+        </ul>
+
+        <h3>Command Shortcuts</h3>
         <ul>
             <li><code>c. s</code> for skip</li>
             <li><code>c. r</code> for report</li>
