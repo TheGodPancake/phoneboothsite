@@ -81,6 +81,21 @@
             margin-bottom: 15px;
         }
 
+        .section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: var(--light-cyan);
+            border-radius: 10px;
+        }
+
+        ol {
+            padding-left: 30px;
+        }
+
+        ol li {
+            margin-bottom: 15px;
+        }
+
         footer {
             background: linear-gradient(90deg, var(--violet-web-color), var(--deep-sky-blue));
             color: white;
@@ -90,13 +105,6 @@
             bottom: 0;
             width: 100%;
             box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
-        }
-
-        .section {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: var(--light-cyan);
-            border-radius: 10px;
         }
     </style>
 </head>
@@ -110,54 +118,97 @@
         <a href="bot-rules.html">Bot Rules</a>
     </nav>
     <main>
-        <h2>Privacy Policy</h2>
-        <p>Last Updated: December 5, 2024</p>
+        <p><strong>Last Updated: December 5, 2024</strong></p>
+
+        <p>Welcome to PhoneBooth! Your privacy is very important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Discord bot, PhoneBooth. Please read this policy carefully. By using PhoneBooth, you agree to the collection and use of your information as outlined in this policy. If you do not agree, please discontinue using the bot.</p>
 
         <div class="section">
             <h3>1. Information We Collect</h3>
-            <p>We collect only the necessary information to provide and improve our service:</p>
+            <p>We only collect the necessary information to provide and improve the service:</p>
             <ul>
-                <li>User ID: Used to manage calls and cross-server communication</li>
-                <li>User Name and Nickname: For identification during calls</li>
-                <li>Avatar Image: Used during calls for user experience</li>
-                <li>In-Call Messages: Processed in real-time during calls</li>
+                <li><strong>User ID:</strong> The unique identifier assigned to you by Discord, used to manage calls and cross-server communication. We store User IDs only if a message is reported. This data is kept for up to 30 days and deleted once the report is resolved or escalated.</li>
+                <li><strong>User Name, Server Nickname, and Display Name:</strong> Your Discord name is used during calls for identification purposes. This information is sent via webhooks and is only stored if a message is reported.</li>
+                <li><strong>Avatar Image:</strong> Your Discord avatar is used during calls for identification purposes and to ensure no inappropriate avatar images are involved. It is also used to provide a good user experience. This data is only stored if a user reports a message and will be deleted within 30 days after the report is resolved or escalated.</li>
+                <li><strong>In-Call Messages:</strong> Messages sent during calls are transmitted to the connected server for communication. These messages are processed in real-time during calls but are not stored beyond the duration of the call unless reported. The message will only be stored if the user reports the message. Reported messages are retained for up to 30 days before being permanently deleted.</li>
             </ul>
+            <p>We do not collect any other information beyond what is stated here.</p>
         </div>
 
         <div class="section">
             <h3>2. How We Use Your Information</h3>
+            <p>Your data is used solely for the following purposes:</p>
             <ul>
-                <li>Provide and maintain the service</li>
-                <li>Improve service features</li>
-                <li>Ensure user safety</li>
-                <li>Comply with legal requirements</li>
+                <li>To Provide and Maintain the Service: Facilitate cross-server calling and manage user information during calls.</li>
+                <li>To Improve the Service: Use feedback to enhance features.</li>
+                <li>To Ensure Safety: Investigate and address reported issues, using temporary data storage.</li>
+                <li>To Ensure Security: Monitor usage to detect and prevent fraudulent or abusive behavior.</li>
+                <li>For Legal Compliance: Data may be used for auditing purposes, to comply with legal obligations, or to respond to valid legal requests.</li>
             </ul>
         </div>
 
         <div class="section">
-            <h3>3. Data Retention</h3>
-            <p>We retain your information only as long as necessary:</p>
+            <h3>3. How We Share Your Information</h3>
+            <p>We prioritize your privacy and do not sell or trade your personal information. We may share data only in these cases:</p>
             <ul>
-                <li>Reported messages: Up to 30 days</li>
-                <li>User information: Deleted after report resolution</li>
+                <li>With Trusted Service Providers: Third-party providers (e.g., hosting and security services) who assist with operating the bot. All third parties are bound by confidentiality agreements.</li>
+                <li>When Required by Law: To comply with applicable laws or respond to valid legal requests.</li>
             </ul>
         </div>
 
         <div class="section">
-            <h3>4. Your Rights</h3>
-            <p>You can:</p>
+            <h3>4. Data Retention</h3>
+            <p>We only retain your information as long as necessary:</p>
             <ul>
-                <li>Request access to your data</li>
-                <li>Request data correction</li>
-                <li>Request data deletion</li>
-                <li>Object to data processing</li>
+                <li>In-Call Messages: Not stored unless reported. Reported messages are kept for 30 days before being deleted.</li>
+                <li>User Information (ID, Names, Avatars): Retained for 30 days if a message is reported. This data is deleted once the report is resolved.</li>
             </ul>
-            <p>Contact us at: PhoneBoothBot@protonmail.com</p>
+            <p>We retain data for a reasonable period after service discontinuation only to comply with legal obligations or resolve disputes.</p>
         </div>
 
         <div class="section">
-            <h3>5. Contact Us</h3>
-            <p>For any privacy-related questions, reach out to:</p>
+            <h3>5. Security of Your Information</h3>
+            <p>We implement industry-standard security measures to protect your data:</p>
+            <ul>
+                <li>Encryption: All data transmission is secured (e.g., TLS/SSL).</li>
+                <li>Access Controls: Only authorized personnel have access to user data.</li>
+                <li>Data Minimization: We only store the minimum data required.</li>
+                <li>Regular Audits: Our systems are regularly reviewed to identify and address security vulnerabilities.</li>
+            </ul>
+            <p>While we make every effort to protect your data, no system is 100% secure. In the unlikely event of a breach, we will notify affected users in compliance with applicable laws.</p>
+        </div>
+
+        <div class="section">
+            <h3>6. Your Rights</h3>
+            <p>Depending on your location, you may have certain rights over your personal data:</p>
+            <ul>
+                <li>Access: Request access to your personal information.</li>
+                <li>Correction: Request updates or corrections to inaccurate data.</li>
+                <li>Deletion: Request the deletion of your personal information.</li>
+                <li>Restriction: Limit how we process your information.</li>
+                <li>Objection: Object to the processing of your personal data.</li>
+                <li>Portability: Request a copy of your data in a machine-readable format.</li>
+            </ul>
+            <p>To exercise these rights, contact us at PhoneBoothBot@protonmail.com or in our support server: https://discord.gg/ZyUqpJTXPF. We will respond to requests within 30 days.</p>
+        </div>
+
+        <div class="section">
+            <h3>7. Opting Out</h3>
+            <p>If you do not agree with this Privacy Policy, you may opt out by ceasing to use the PhoneBooth bot. Users are reminded of this Privacy Policy and their ability to opt out at the start of each call.</p>
+        </div>
+
+        <div class="section">
+            <h3>8. Children's Privacy</h3>
+            <p>PhoneBooth is not intended for users under the age of 13 (or the minimum age in your jurisdiction). We do not knowingly collect information from children. If we become aware of data collected from a child, we will delete it promptly.</p>
+        </div>
+
+        <div class="section">
+            <h3>9. Changes to This Privacy Policy</h3>
+            <p>We may update this Privacy Policy occasionally. For significant changes, we will notify you at least 15 days in advance via Discord server announcements or direct messages. You can view the version history of updates in the changelog. We encourage you to review this policy periodically. Continued use of PhoneBooth after changes constitutes acceptance of the updated policy.</p>
+        </div>
+
+        <div class="section">
+            <h3>10. Contact Us</h3>
+            <p>If you have questions or concerns about this Privacy Policy, please contact us at:</p>
             <p>Email: PhoneBoothBot@protonmail.com</p>
             <p>Support Server: https://discord.gg/ZyUqpJTXPF</p>
         </div>
