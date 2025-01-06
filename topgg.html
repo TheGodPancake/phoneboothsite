@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonebooth - Connect Across Discord</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --violet-web-color: #F682DD;
+            --deep-sky-blue: #00B7FE;
+            --chefchaouen-blue: #5296F1;
+            --light-cyan: #C5F5FD;
+            --celestial-blue: #009FFE;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--light-cyan), var(--deep-sky-blue));
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .discord-button {
+            background-color: #76b9ff;
+            color: white;
+        }
+
+        .add-server-button {
+            background-color: #fba4ec;
+            color: white;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="https://discord.com/invite/BuzvBguFBA" class="button discord-button">JOIN OUR DISCORD</a>
+        <a href="https://top.gg/bot/1304252651021664347/invite" class="button add-server-button">ADD BOT TO YOUR SERVER</a>
+    </div>
+</body>
+</html>
