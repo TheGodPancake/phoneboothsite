@@ -114,6 +114,43 @@
             width: 100%;
             box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
         }
+
+        /* Top.gg widget styling */
+        .topgg-widget {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(45deg, var(--light-cyan), rgba(255,255,255,0.8));
+            border-radius: 15px;
+            border: 2px solid var(--deep-sky-blue);
+        }
+
+        .topgg-widget p {
+            margin-bottom: 15px;
+            color: var(--chefchaouen-blue);
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .topgg-widget a {
+            display: inline-block;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .topgg-widget a:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .topgg-widget img {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -156,7 +193,17 @@
             <li><code>c. r</code> for report</li>
             <li><code>c. c</code> for call</li>
             <li><code>c. h</code> for hangup</li>
+            <li><code>c. dminfo</code> for information on DM calling</li>
+            <li><code>c. lb</code> to show the top 10 servers</li>
         </ul>
+
+        <h3>Support Phonebooth</h3>
+        <div class="topgg-widget">
+            <p>⭐ Rate us on Top.gg and help others discover Phonebooth!</p>
+            <a href="https://top.gg/bot/1304252651021664347" target="_blank">
+                <img src="https://top.gg/api/widget/1304252651021664347.svg" alt="Phonebooth Discord Bot on Top.gg">
+            </a>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Phonebooth. All rights reserved.</p>
