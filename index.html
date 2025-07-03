@@ -151,6 +151,37 @@
             max-width: 100%;
             height: auto;
         }
+
+        /* Custom highlight for server count */
+        .highlight-number {
+            color: var(--chefchaouen-blue);
+            font-weight: 600;
+            font-size: 1.3em;
+            background: linear-gradient(45deg, var(--violet-web-color), var(--deep-sky-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Custom vote button */
+        .custom-vote-button {
+            background: linear-gradient(45deg, var(--violet-web-color), var(--deep-sky-blue));
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .custom-vote-button:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            filter: brightness(1.1);
+        }
     </style>
 </head>
 <body>
@@ -199,14 +230,29 @@
 
         <h3>Support Phonebooth</h3>
         <div class="topgg-widget">
-            <p>⭐ Rate us on Top.gg and help others discover Phonebooth!</p>
-            <a href="https://top.gg/bot/1304252651021664347" target="_blank">
-                <img src="https://top.gg/api/widget/1304252651021664347.svg" alt="Phonebooth Discord Bot on Top.gg">
+            <p>⭐ Trusted by <span id="server-count" class="highlight-number">Loading...</span> Discord servers!</p>
+            <a href="https://top.gg/bot/1304252651021664347" target="_blank" class="custom-vote-button">
+                Vote on Top.gg
             </a>
         </div>
     </main>
     <footer>
         <p>&copy; 2024 Phonebooth. All rights reserved.</p>
     </footer>
+    
+    <script>
+    async function fetchServerCount() {
+        try {
+            const response = await fetch('https://top.gg/api/bots/1304252651021664347');
+            const data = await response.json();
+            const serverCount = data.server_count || 'many';
+            document.getElementById('server-count').textContent = serverCount.toLocaleString();
+        } catch (error) {
+            console.log('Could not fetch server count:', error);
+            document.getElementById('server-count').textContent = 'many';
+        }
+    }
+    fetchServerCount();
+    </script>
 </body>
 </html>
