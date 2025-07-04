@@ -49,6 +49,7 @@
             padding: 20px 0;
             box-shadow: 0 2px 20px rgba(0,0,0,0.1);
             border-bottom: 1px solid rgba(255,255,255,0.2);
+            position: relative;
         }
 
         .header-area .main-nav .logo h1 {
@@ -123,6 +124,8 @@
                 padding: 20px;
                 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
                 border-radius: 0 0 15px 15px;
+                z-index: 1000;
+                margin-top: 10px;
             }
             
             .header-area .main-nav .nav.show {
@@ -157,6 +160,11 @@
             .menu-trigger:hover {
                 background: rgba(255,255,255,0.1);
                 border-color: rgba(255,255,255,0.5);
+            }
+            
+            /* Add margin to main banner to prevent overlap */
+            .main-banner {
+                margin-top: 20px;
             }
         }
 
