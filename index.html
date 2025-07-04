@@ -311,6 +311,279 @@
             max-width: 600px;
             margin: 0 auto;
         }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 991px) {
+            .header-area .main-nav .nav {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 20px;
+            }
+            
+            .header-area .main-nav .nav li a {
+                padding: 10px 20px;
+                margin: 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .main-nav .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Header adjustments */
+            .header-area .main-nav {
+                padding: 15px 0;
+            }
+            
+            .header-area .main-nav .logo h1 {
+                font-size: 1.8em;
+            }
+            
+            /* Banner adjustments */
+            .main-banner {
+                padding: 60px 0;
+            }
+            
+            .main-banner .header-text h2 {
+                font-size: 2.5em;
+                margin-bottom: 15px;
+            }
+            
+            .main-banner .header-text p {
+                font-size: 1.1em;
+                margin-bottom: 25px;
+                padding: 0 15px;
+            }
+            
+            .main-banner .header-text .category {
+                padding: 6px 16px;
+                font-size: 0.9em;
+            }
+            
+            /* Button adjustments */
+            .main-button a {
+                padding: 12px 24px;
+                margin: 8px;
+                font-size: 0.95em;
+                width: calc(100% - 16px);
+                max-width: 280px;
+                text-align: center;
+            }
+            
+            .main-banner .buttons {
+                padding: 0 20px;
+            }
+            
+            /* Services section */
+            .services {
+                padding: 60px 0;
+            }
+            
+            .service-item {
+                padding: 30px 20px;
+                margin-bottom: 20px;
+            }
+            
+            .service-item .icon {
+                font-size: 2.5em;
+                margin-bottom: 15px;
+            }
+            
+            .service-item h4 {
+                font-size: 1.3em;
+                margin: 15px 0;
+            }
+            
+            .service-item p {
+                font-size: 0.95em;
+                line-height: 1.6;
+            }
+            
+            /* Commands section */
+            .commands-section {
+                padding: 60px 0;
+            }
+            
+            .command-item {
+                padding: 12px 16px;
+                margin: 8px 0;
+                font-size: 0.9em;
+            }
+            
+            .command-item code {
+                padding: 4px 8px;
+                font-size: 0.85em;
+            }
+            
+            /* Section headings */
+            .section-heading {
+                margin-bottom: 40px;
+                padding: 0 15px;
+            }
+            
+            .section-heading h2 {
+                font-size: 2em;
+                margin-bottom: 15px;
+            }
+            
+            .section-heading p {
+                font-size: 1em;
+                padding: 0 10px;
+            }
+            
+            /* Top.gg widget */
+            .topgg-widget {
+                padding: 30px 15px;
+                margin: 30px 0;
+            }
+            
+            .topgg-widget a {
+                width: 100%;
+                max-width: 350px;
+                height: 160px;
+            }
+            
+            .topgg-widget img {
+                width: 100%;
+                max-width: 350px;
+                top: -35px;
+                clip-path: inset(35px 0 0px 0);
+            }
+            
+            .topgg-widget p {
+                font-size: 1.1em;
+                margin-bottom: 15px;
+            }
+            
+            /* Support section */
+            #support {
+                padding: 60px 0 !important;
+            }
+            
+            /* Footer */
+            footer {
+                padding: 25px 0;
+            }
+            
+            footer p {
+                font-size: 0.9em;
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            /* Extra small devices */
+            .container {
+                padding: 0 15px;
+            }
+            
+            .main-banner .header-text h2 {
+                font-size: 2em;
+                line-height: 1.2;
+            }
+            
+            .main-banner .header-text p {
+                font-size: 1em;
+                padding: 0 10px;
+            }
+            
+            .section-heading h2 {
+                font-size: 1.8em;
+            }
+            
+            .service-item {
+                padding: 25px 15px;
+            }
+            
+            .service-item .icon {
+                font-size: 2.2em;
+            }
+            
+            .service-item h4 {
+                font-size: 1.2em;
+            }
+            
+            .topgg-widget a {
+                width: 100%;
+                max-width: 300px;
+                height: 140px;
+            }
+            
+            .topgg-widget img {
+                width: 100%;
+                max-width: 300px;
+                top: -30px;
+                clip-path: inset(30px 0 0px 0);
+            }
+            
+            .command-item {
+                padding: 10px 14px;
+                font-size: 0.85em;
+            }
+            
+            .main-button a {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Very small devices */
+            .header-area .main-nav .logo h1 {
+                font-size: 1.6em;
+            }
+            
+            .main-banner {
+                padding: 50px 0;
+            }
+            
+            .main-banner .header-text h2 {
+                font-size: 1.8em;
+            }
+            
+            .section-heading h2 {
+                font-size: 1.6em;
+            }
+            
+            .topgg-widget {
+                padding: 20px 10px;
+            }
+            
+            .topgg-widget a {
+                width: 100%;
+                max-width: 280px;
+                height: 130px;
+            }
+            
+            .topgg-widget img {
+                width: 100%;
+                max-width: 280px;
+                top: -25px;
+                clip-path: inset(25px 0 0px 0);
+            }
+        }
+
+        /* Touch device improvements */
+        @media (hover: none) and (pointer: coarse) {
+            .main-button a:hover,
+            .service-item:hover,
+            .command-item:hover,
+            .topgg-widget a:hover {
+                transform: none;
+            }
+            
+            .main-button a:active {
+                transform: scale(0.98);
+            }
+            
+            .service-item:active {
+                transform: scale(0.98);
+            }
+        }
     </style>
   </head>
 

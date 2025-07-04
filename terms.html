@@ -239,6 +239,174 @@
             max-width: 600px;
             margin: 0 auto;
         }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 991px) {
+            .header-area .main-nav .nav {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 20px;
+            }
+            
+            .header-area .main-nav .nav li a {
+                padding: 10px 20px;
+                margin: 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .main-nav .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Header adjustments */
+            .header-area .main-nav {
+                padding: 15px 0;
+            }
+            
+            .header-area .main-nav .logo h1 {
+                font-size: 1.8em;
+            }
+            
+            /* Banner adjustments */
+            .main-banner {
+                padding: 60px 0;
+            }
+            
+            .main-banner .header-text h2 {
+                font-size: 2.5em;
+                margin-bottom: 15px;
+            }
+            
+            .main-banner .header-text p {
+                font-size: 1.1em;
+                margin-bottom: 25px;
+                padding: 0 15px;
+            }
+            
+            .main-banner .header-text .category {
+                padding: 6px 16px;
+                font-size: 0.9em;
+            }
+            
+            /* Content section */
+            .content-section {
+                padding: 60px 0;
+            }
+            
+            .content-item {
+                padding: 25px 20px;
+                margin-bottom: 20px;
+            }
+            
+            .content-item h3 {
+                font-size: 1.4em;
+                margin-bottom: 15px;
+            }
+            
+            .content-item p,
+            .content-item li {
+                font-size: 0.95em;
+                line-height: 1.6;
+            }
+            
+            /* Section headings */
+            .section-heading {
+                margin-bottom: 40px;
+                padding: 0 15px;
+            }
+            
+            .section-heading h2 {
+                font-size: 2em;
+                margin-bottom: 15px;
+            }
+            
+            .section-heading p {
+                font-size: 1em;
+                padding: 0 10px;
+            }
+            
+            /* Footer */
+            footer {
+                padding: 25px 0;
+            }
+            
+            footer p {
+                font-size: 0.9em;
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            /* Extra small devices */
+            .container {
+                padding: 0 15px;
+            }
+            
+            .main-banner .header-text h2 {
+                font-size: 2em;
+                line-height: 1.2;
+            }
+            
+            .main-banner .header-text p {
+                font-size: 1em;
+                padding: 0 10px;
+            }
+            
+            .section-heading h2 {
+                font-size: 1.8em;
+            }
+            
+            .content-item {
+                padding: 20px 15px;
+            }
+            
+            .content-item h3 {
+                font-size: 1.3em;
+            }
+            
+            .content-item p,
+            .content-item li {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Very small devices */
+            .header-area .main-nav .logo h1 {
+                font-size: 1.6em;
+            }
+            
+            .main-banner {
+                padding: 50px 0;
+            }
+            
+            .main-banner .header-text h2 {
+                font-size: 1.8em;
+            }
+            
+            .section-heading h2 {
+                font-size: 1.6em;
+            }
+            
+            .content-item {
+                padding: 18px 12px;
+            }
+        }
+
+        /* Touch device improvements */
+        @media (hover: none) and (pointer: coarse) {
+            .content-item:hover {
+                transform: none;
+            }
+            
+            .content-item:active {
+                transform: scale(0.98);
+            }
+        }
     </style>
   </head>
 
