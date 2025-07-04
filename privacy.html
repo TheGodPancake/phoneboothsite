@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <title>Phonebooth - Privacy Policy</title>
     <link rel="icon" href="phonebooth.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root {
             --violet-web-color: #F682DD;
@@ -19,207 +29,424 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, var(--light-cyan), var(--deep-sky-blue));
+            background: linear-gradient(90deg, var(--violet-web-color), var(--deep-sky-blue));
             color: #333;
             line-height: 1.6;
         }
 
-        header {
-            background: linear-gradient(90deg, var(--chefchaouen-blue), var(--celestial-blue));
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        /* Header Styles */
+        .header-area {
+            background: transparent;
+            padding: 0;
+            position: relative;
+            z-index: 999;
         }
 
-        header h1 {
+        .header-area .main-nav {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .header-area .main-nav .logo h1 {
+            color: white;
+            font-size: 2.2em;
+            font-weight: 700;
             margin: 0;
-            font-size: 2.5em;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        nav {
-            background-color: rgba(255,255,255,0.9);
-            padding: 15px 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        nav a {
-            margin: 0 15px;
             text-decoration: none;
-            color: var(--chefchaouen-blue);
-            padding: 10px 20px;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            font-weight: 600;
         }
 
-        nav a:hover {
-            background-color: var(--violet-web-color);
+        .header-area .main-nav .logo {
+            text-decoration: none;
+        }
+
+        .header-area .main-nav .logo:hover {
+            text-decoration: none;
+        }
+
+        .header-area .main-nav .nav li a {
             color: white;
-            transform: scale(1.05);
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            background: rgba(255,255,255,0.1);
+            margin: 0 5px;
+            border: 1px solid rgba(255,255,255,0.2);
         }
 
-        main {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: 20px auto;
-            background-color: white;
+        .header-area .main-nav .nav li a:hover,
+        .header-area .main-nav .nav li a.active {
+            background: rgba(255,255,255,0.25);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .header-area .main-nav .nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-area .main-nav .nav li {
+            margin: 0 5px;
+        }
+
+        .main-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-trigger {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .header-area .main-nav .nav {
+                display: none;
+            }
+            .menu-trigger {
+                display: block;
+                color: white;
+                font-weight: 600;
+            }
+        }
+
+        /* Main Banner */
+        .main-banner {
+            background: linear-gradient(90deg, var(--violet-web-color), var(--deep-sky-blue));
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .main-banner .header-text h2 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .main-banner .header-text p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .main-banner .header-text .category {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 80px 0;
+            background: rgba(255,255,255,0.95);
+        }
+
+        .content-item {
+            background: white;
+            padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
         }
 
-        main h2, main h3 {
+        .content-item h3 {
             color: var(--chefchaouen-blue);
+            font-weight: 600;
+            margin-bottom: 20px;
             border-bottom: 2px solid var(--deep-sky-blue);
             padding-bottom: 10px;
         }
 
-        main p {
-            margin-bottom: 15px;
+        .content-item ul {
+            list-style: none;
+            padding: 0;
         }
 
-        .section {
-            margin-bottom: 20px;
+        .content-item ul li {
             padding: 15px;
-            background-color: var(--light-cyan);
+            background: linear-gradient(45deg, var(--light-cyan), rgba(255,255,255,0.8));
+            margin: 10px 0;
             border-radius: 10px;
+            border-left: 4px solid var(--violet-web-color);
+            transition: all 0.3s ease;
         }
 
-        main ul, main ol {
-            padding-left: 30px;
+        .content-item ul li:hover {
+            background: var(--deep-sky-blue);
+            color: white;
+            transform: translateX(10px);
         }
 
-        main ul li, main ol li {
-            margin-bottom: 15px;
+        .content-item a {
+            color: var(--chefchaouen-blue);
+            text-decoration: none;
+            font-weight: 600;
         }
 
+        .content-item a:hover {
+            color: var(--violet-web-color);
+        }
+
+        .content-item .intro-text {
+            background: linear-gradient(45deg, var(--light-cyan), rgba(255,255,255,0.8));
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--violet-web-color);
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
         footer {
-            background: linear-gradient(90deg, var(--violet-web-color), var(--deep-sky-blue));
+            background: linear-gradient(90deg, var(--chefchaouen-blue), var(--celestial-blue));
             color: white;
             text-align: center;
-            padding: 15px 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+            padding: 30px 0;
+        }
+
+        /* Section Headings */
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-heading h6 {
+            color: var(--violet-web-color);
+            font-weight: 600;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            color: var(--chefchaouen-blue);
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .section-heading p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
         }
     </style>
-</head>
+  </head>
+
 <body>
-    <header>
-        <h1>Phonebooth Privacy Policy</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="terms.html">Terms and Conditions</a>
-        <a href="bot-rules.html">Bot Rules</a>
-    </nav>
-    <main>
-        <p><strong>Last Updated: December 6, 2024</strong></p>
 
-        <p>Welcome to PhoneBooth!
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <div class="container">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <h1>Phonebooth</h1>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="index.html#support">Support Us</a></li>
+                          <li><a href="terms.html">Terms</a></li>
+                          <li><a href="privacy.html" class="active">Privacy</a></li>
+                          <li><a href="bot-rules.html">Rules</a></li>
+                        </ul>   
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
 
-Your privacy is of utmost importance to us. This Privacy Policy details how we collect, use, disclose, and protect your information while you interact with our bot, PhoneBooth, on Discord. We urge you to read this policy carefully. By continuing to use PhoneBooth, you acknowledge and agree to the collection and use of your information as described herein. If you do not agree with these terms, please discontinue use of the bot.</p>
+  <div class="main-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="header-text">
+            <span class="category">Privacy</span>
+            <h2>Privacy Policy</h2>
+            <p>Your privacy is of utmost importance to us. Learn how we protect your data.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <div class="section">
+  <div class="content-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6>Privacy</h6>
+            <h2>Privacy Policy</h2>
+            <p>Last Updated: July 3, 2025</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="content-item">
+            <div class="intro-text">
+              <p><strong>Welcome to PhoneBooth!</strong></p>
+              <p>Your privacy is of utmost importance to us. This Privacy Policy details how we collect, use, disclose, and protect your information while you interact with our bot, PhoneBooth, on Discord. We urge you to read this policy carefully. By continuing to use PhoneBooth, you acknowledge and agree to the collection and use of your information as described herein. If you do not agree with these terms, please discontinue use of the bot.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="content-item">
             <h3>1. Information We Collect</h3>
             <p>We only collect the necessary information to provide and improve the service:</p>
             <ul>
-                <li><strong>User ID:</strong> The unique identifier assigned to you by Discord, used to manage calls and cross-server communication. We store User IDs only if a message is reported. This data is kept for up to 30 days and deleted once the report is resolved or escalated.</li>
-                <li><strong>User Name, Server Nickname, and Display Name:</strong> Your Discord name is used during calls for identification purposes. This information is sent via webhooks and is only stored if a message is reported.</li>
-                <li><strong>Avatar Image:</strong> Your Discord avatar is used during calls for identification purposes and to ensure no inappropriate avatar images are involved. It is also used to provide a good user experience. This data is only stored if a user reports a message and will be deleted within 30 days after the report is resolved or escalated.</li>
-                <li><strong>In-Call Messages:</strong> Messages sent during calls are transmitted to the connected server for communication. These messages are processed in real-time during calls but are not stored beyond the duration of the call unless reported. The message will only be stored if the user reports the message. Reported messages are retained for up to 30 days before being permanently deleted.</li>
-                <li><strong>Server Name and Server Image:</strong> For servers that appear in the top 10 most active servers leaderboard (accessible via the c.leaderboard command), we collect and store the server name and server image/icon. This information will be publicly displayed in the top 10 leaderboard to showcase server activity rankings and highlight which servers have the most active PhoneBooth usage.</li>
+              <li><strong>User ID:</strong> The unique identifier assigned to you by Discord, used to manage calls and cross-server communication. We store User IDs only if a message is reported. This data is kept for up to 30 days and deleted once the report is resolved or escalated.</li>
+              <li><strong>User Name, Server Nickname, and Display Name:</strong> Your Discord name is used during calls for identification purposes. This information is sent via webhooks and is only stored if a message is reported.</li>
+              <li><strong>Avatar Image:</strong> Your Discord avatar is used during calls for identification purposes and to ensure no inappropriate avatar images are involved. It is also used to provide a good user experience. This data is only stored if a user reports a message and will be deleted within 30 days after the report is resolved or escalated.</li>
+              <li><strong>In-Call Messages:</strong> Messages sent during calls are transmitted to the connected server for communication. These messages are processed in real-time during calls but are not stored beyond the duration of the call unless reported.</li>
+              <li><strong>Server Name and Server Image:</strong> For servers that appear in the top 10 most active servers leaderboard (accessible via the c.leaderboard command), we collect and store the server name and server image/icon.</li>
             </ul>
             <p>We do not collect any other information beyond what is stated here.</p>
-        </div>
-
-        <div class="section">
+          </div>
+          
+          <div class="content-item">
             <h3>2. How We Use Your Information</h3>
             <p>Your data is used solely for the following purposes:</p>
             <ul>
-                <li>To Provide and Maintain the Service: Facilitate cross-server calling and manage user information during calls.</li>
-                <li>To Improve the Service: Use feedback to enhance features.</li>
-                <li>To Ensure Safety: Investigate and address reported issues, using temporary data storage.</li>
-                <li>To Ensure Security: Monitor usage to detect and prevent fraudulent or abusive behavior.</li>
-                <li>To Display Leaderboards: Publicly display the top 10 most active servers with their server information in the c.leaderboard command to recognize and celebrate server engagement and PhoneBooth usage across the Discord platform.</li>
-                <li>For Legal Compliance: Data may be used for auditing purposes, to comply with legal obligations, or to respond to valid legal requests.</li>
+              <li>To Provide and Maintain the Service: Facilitate cross-server calling and manage user information during calls.</li>
+              <li>To Improve the Service: Use feedback to enhance features.</li>
+              <li>To Ensure Safety: Investigate and address reported issues, using temporary data storage.</li>
+              <li>To Ensure Security: Monitor usage to detect and prevent fraudulent or abusive behavior.</li>
+              <li>To Display Leaderboards: Publicly display the top 10 most active servers with their server information in the c.leaderboard command.</li>
+              <li>For Legal Compliance: Data may be used for auditing purposes, to comply with legal obligations, or to respond to valid legal requests.</li>
             </ul>
-        </div>
-
-        <div class="section">
+          </div>
+          
+          <div class="content-item">
             <h3>3. How We Share Your Information</h3>
             <p>We prioritize your privacy and do not sell or trade your personal information. We may share data only in these cases:</p>
             <ul>
-                <li>With Trusted Service Providers: Third-party providers (e.g., hosting and security services) who assist with operating the bot. All third parties are bound by confidentiality agreements.</li>
-                <li>When Required by Law: To comply with applicable laws or respond to valid legal requests.</li>
+              <li>With Trusted Service Providers: Third-party providers (e.g., hosting and security services) who assist with operating the bot. All third parties are bound by confidentiality agreements.</li>
+              <li>When Required by Law: To comply with applicable laws or respond to valid legal requests.</li>
             </ul>
+          </div>
         </div>
-
-        <div class="section">
+        
+        <div class="col-lg-6">
+          <div class="content-item">
             <h3>4. Data Retention</h3>
             <p>We only retain your information as long as necessary:</p>
             <ul>
-                <li>In-Call Messages: Not stored unless reported. Reported messages are kept for 30 days before being deleted.</li>
-                <li>User Information (ID, Names, Avatars): Retained for 30 days if a message is reported. This data is deleted once the report is resolved.</li>
-                <li>Server Information (Name, Image): For servers displayed in the top 10 most active servers leaderboard, server names and images are retained as long as the server remains in the top 10 rankings. This data is automatically removed when a server is no longer among the top 10 most active servers.</li>
+              <li>In-Call Messages: Not stored unless reported. Reported messages are kept for 30 days before being deleted.</li>
+              <li>User Information (ID, Names, Avatars): Retained for 30 days if a message is reported. This data is deleted once the report is resolved.</li>
+              <li>Server Information (Name, Image): For servers displayed in the top 10 most active servers leaderboard, server names and images are retained as long as the server remains in the top 10 rankings.</li>
             </ul>
-            <p>We retain data for a reasonable period after service discontinuation only to comply with legal obligations or resolve disputes.</p>
-        </div>
-
-        <div class="section">
+          </div>
+          
+          <div class="content-item">
             <h3>5. Security of Your Information</h3>
             <p>We implement industry-standard security measures to protect your data:</p>
             <ul>
-                <li>Encryption: All data transmission is secured (e.g., TLS/SSL).</li>
-                <li>Access Controls: Only authorized personnel have access to user data.</li>
-                <li>Data Minimization: We only store the minimum data required.</li>
-                <li>Regular Audits: Our systems are regularly reviewed to identify and address security vulnerabilities.</li>
+              <li>Encryption: All data transmission is secured (e.g., TLS/SSL).</li>
+              <li>Access Controls: Only authorized personnel have access to user data.</li>
+              <li>Data Minimization: We only store the minimum data required.</li>
+              <li>Regular Audits: Our systems are regularly reviewed to identify and address security vulnerabilities.</li>
             </ul>
             <p>While we make every effort to protect your data, no system is 100% secure. In the unlikely event of a breach, we will notify affected users in compliance with applicable laws.</p>
-        </div>
-
-        <div class="section">
+          </div>
+          
+          <div class="content-item">
             <h3>6. Your Rights</h3>
             <p>Depending on your location, you may have certain rights over your personal data:</p>
             <ul>
-                <li>Access: Request access to your personal information.</li>
-                <li>Correction: Request updates or corrections to inaccurate data.</li>
-                <li>Deletion: Request the deletion of your personal information.</li>
-                <li>Restriction: Limit how we process your information.</li>
-                <li>Objection: Object to the processing of your personal data.</li>
-                <li>Portability: Request a copy of your data in a machine-readable format.</li>
+              <li>Access: Request access to your personal information.</li>
+              <li>Correction: Request updates or corrections to inaccurate data.</li>
+              <li>Deletion: Request the deletion of your personal information.</li>
+              <li>Restriction: Limit how we process your information.</li>
+              <li>Objection: Object to the processing of your personal data.</li>
+              <li>Portability: Request a copy of your data in a machine-readable format.</li>
             </ul>
-            <p>To exercise these rights, contact us at <a href="mailto:PhoneBoothBot@protonmail.com">PhoneBoothBot@protonmail.com</a></p> or <a href="https://discord.gg/ZyUqpJTXPF" style="color: blue;">Join Our Support Server and create a ticket</a></p> We will respond to requests within 30 days.</p>
+            <p>To exercise these rights, contact us at <a href="mailto:PhoneBoothBot@protonmail.com">PhoneBoothBot@protonmail.com</a> or <a href="https://discord.gg/ZyUqpJTXPF">Join Our Support Server and create a ticket</a>. We will respond to requests within 30 days.</p>
+          </div>
         </div>
+      </div>
 
-        <div class="section">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="content-item">
             <h3>7. Opting Out</h3>
             <p>If you do not agree with this Privacy Policy, you may opt out by ceasing to use the PhoneBooth bot. Users are reminded of this Privacy Policy and their ability to opt out at the start of each call.</p>
+          </div>
         </div>
-
-        <div class="section">
+        
+        <div class="col-lg-4">
+          <div class="content-item">
             <h3>8. Children's Privacy</h3>
             <p>PhoneBooth is not intended for users under the age of 13 (or the minimum age in your jurisdiction). We do not knowingly collect information from children. If we become aware of data collected from a child, we will delete it promptly.</p>
+          </div>
         </div>
-
-        <div class="section">
+        
+        <div class="col-lg-4">
+          <div class="content-item">
             <h3>9. Changes to This Privacy Policy</h3>
-            <p>We may update this Privacy Policy occasionally. For significant changes, we will notify you at least 15 days in advance via Discord server announcements or direct messages. You can view the version history of updates in the changelog. We encourage you to review this policy periodically. Continued use of PhoneBooth after changes constitutes acceptance of the updated policy.</p>
+            <p>We may update this Privacy Policy occasionally. For significant changes, we will notify you at least 15 days in advance via Discord server announcements or direct messages. You can view the version history of updates in the changelog.</p>
+          </div>
         </div>
-
-        <div class="section">
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="content-item">
             <h3>10. Contact Us</h3>
             <p>If you have questions or concerns about this Privacy Policy, please contact us at:</p>
-            <p>Email: <a href="mailto:PhoneBoothBot@protonmail.com">PhoneBoothBot@protonmail.com</a></p>
-            <p>Support Server: <a href="https://discord.gg/ZyUqpJTXPF" style="color: blue;">Join Our Support Server</a></p>
+            <ul>
+              <li>Email: <a href="mailto:PhoneBoothBot@protonmail.com">PhoneBoothBot@protonmail.com</a></li>
+              <li>Support Server: <a href="https://discord.gg/ZyUqpJTXPF">Join Our Support Server</a></li>
+            </ul>
+          </div>
         </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Phonebooth. All rights reserved.</p>
-    </footer>
-</body>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>&copy; 2025 Phonebooth. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
 </html>

@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <title>Phonebooth - Bot Rules</title>
     <link rel="icon" href="phonebooth.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root {
             --violet-web-color: #F682DD;
@@ -19,150 +29,335 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, var(--light-cyan), var(--deep-sky-blue));
+            background: linear-gradient(90deg, var(--violet-web-color), var(--deep-sky-blue));
             color: #333;
             line-height: 1.6;
         }
 
-        header {
-            background: linear-gradient(90deg, var(--chefchaouen-blue), var(--celestial-blue));
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        /* Header Styles */
+        .header-area {
+            background: transparent;
+            padding: 0;
+            position: relative;
+            z-index: 999;
         }
 
-        header h1 {
+        .header-area .main-nav {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .header-area .main-nav .logo h1 {
+            color: white;
+            font-size: 2.2em;
+            font-weight: 700;
             margin: 0;
-            font-size: 2.5em;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        nav {
-            background-color: rgba(255,255,255,0.9);
-            padding: 15px 0;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        nav a {
-            margin: 0 15px;
             text-decoration: none;
-            color: var(--chefchaouen-blue);
-            padding: 10px 20px;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            font-weight: 600;
         }
 
-        nav a:hover {
-            background-color: var(--violet-web-color);
+        .header-area .main-nav .logo {
+            text-decoration: none;
+        }
+
+        .header-area .main-nav .logo:hover {
+            text-decoration: none;
+        }
+
+        .header-area .main-nav .nav li a {
             color: white;
-            transform: scale(1.05);
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            background: rgba(255,255,255,0.1);
+            margin: 0 5px;
+            border: 1px solid rgba(255,255,255,0.2);
         }
 
-        main {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: 20px auto;
-            background-color: white;
+        .header-area .main-nav .nav li a:hover,
+        .header-area .main-nav .nav li a.active {
+            background: rgba(255,255,255,0.25);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .header-area .main-nav .nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-area .main-nav .nav li {
+            margin: 0 5px;
+        }
+
+        .main-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-trigger {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .header-area .main-nav .nav {
+                display: none;
+            }
+            .menu-trigger {
+                display: block;
+                color: white;
+                font-weight: 600;
+            }
+        }
+
+        /* Main Banner */
+        .main-banner {
+            background: linear-gradient(90deg, var(--violet-web-color), var(--deep-sky-blue));
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .main-banner .header-text h2 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .main-banner .header-text p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .main-banner .header-text .category {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 80px 0;
+            background: rgba(255,255,255,0.95);
+        }
+
+        .content-item {
+            background: white;
+            padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
         }
 
-        main h2, main h3 {
+        .content-item h3 {
             color: var(--chefchaouen-blue);
+            font-weight: 600;
+            margin-bottom: 20px;
             border-bottom: 2px solid var(--deep-sky-blue);
             padding-bottom: 10px;
         }
 
-        ul {
-            list-style-type: none;
+        .content-item ul {
+            list-style: none;
             padding: 0;
         }
 
-        ul li {
-            padding: 10px;
-            background-color: var(--light-cyan);
-            margin: 5px 0;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+        .content-item ul li {
+            padding: 15px;
+            background: linear-gradient(45deg, var(--light-cyan), rgba(255,255,255,0.8));
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 4px solid var(--violet-web-color);
+            transition: all 0.3s ease;
         }
 
-        ul li:hover {
-            background-color: var(--deep-sky-blue);
+        .content-item ul li:hover {
+            background: var(--deep-sky-blue);
             color: white;
+            transform: translateX(10px);
         }
 
-        code {
-            background-color: var(--light-cyan);
-            border: 1px solid var(--chefchaouen-blue);
-            padding: 2px 6px;
-            border-radius: 4px;
-            color: var(--chefchaouen-blue);
-            font-weight: 600;
+        .content-item ul li strong {
+            display: block;
+            margin-bottom: 5px;
         }
 
+        /* Footer */
         footer {
-            background: linear-gradient(90deg, var(--violet-web-color), var(--deep-sky-blue));
+            background: linear-gradient(90deg, var(--chefchaouen-blue), var(--celestial-blue));
             color: white;
             text-align: center;
-            padding: 15px 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+            padding: 30px 0;
+        }
+
+        /* Section Headings */
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-heading h6 {
+            color: var(--violet-web-color);
+            font-weight: 600;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            color: var(--chefchaouen-blue);
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .section-heading p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
         }
     </style>
-</head>
+  </head>
+
 <body>
-    <header>
-        <h1>Phonebooth Bot Rules 📋</h1>
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="terms.html">Terms and Conditions</a>
-        <a href="privacy.html">Privacy Policy</a>
-    </nav>
-    <main>
-        <h2>Phonebooth Bot Rules</h2>
 
-        <h3>Fundamental Rules</h3>
-        <ul>
-            <li><strong>Please open a ticket</strong> if you are having an issue regarding the bot. Do not dm staff.</li>
-            <li><strong>NO NSFW topics:</strong> Strictly prohibited.</li>
-            <li><strong>NO nsfw usernames or profiles:</strong> This goes back to our no NSFW rule we are strictly sfw and will not allow any accounts with suggestive, nsfw, inappropriate or offensive usernames/profiles on our bot.</li>
-            <li><strong>Safety first:</strong> No flirting or "E-Dating" due to Discord's 13+ age requirement.</li>
-            <li><strong>NO mentions or discussions of illegal/offensive activity:</strong> This includes drug abuse/activity, theft, substance use, piracy and everything alike.</li>
-            <li><strong>Personal info:</strong> Do not share personal information, including your location or phone number.</li>
-            <li><strong>Racism, homophobia, ableism, transphobia & derogatory behavior</strong> is <u><strong>not</strong></u> tolerated here & will lead to a <u>instant ban</u>.</li>
-        </ul>
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <div class="container">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <h1>Phonebooth</h1>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="index.html#support">Support Us</a></li>
+                          <li><a href="terms.html">Terms</a></li>
+                          <li><a href="privacy.html">Privacy</a></li>
+                          <li><a href="bot-rules.html" class="active">Rules</a></li>
+                        </ul>   
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
 
-        <h3>Conduct Guidelines</h3>
-        <ul>
-            <li><strong>Mutual respect:</strong> Please remember to treat others how you want to be treated, do not engage in bullying, hate speech or coordinating server raids to target a specific person or community.</li>
-            <li><strong>Avoid controversial or sensitive topics:</strong> Certain topics such as religious beliefs, politics, war, violence, death, self harm and mental illness.</li>
-            <li><strong>No toxicity:</strong> We like to avoid mellow dramatic drama or any toxicity period. This assures everyone stays happy.</li>
-            <li><strong>No spamming:</strong> This includes spam pinging.</li>
-            <li><strong>No sending harmful links and doxxing:</strong> Sending harmful links/phishing links, doxing and discussion of doing so is prohibited and will result in an immediate ban.</li>
-            <li><strong>False reports:</strong> Do not falsely report users to ensure effective rule enforcement.</li>
-            <li><strong>Invite links:</strong> No Discord invite links in chat; use DMs if requested.</li>
-            <li><strong>Self-harm/suicide:</strong> Mentions of self-harm & suicide are forbidden to maintain a safe and happy environment.</li>
-            <li><strong>Follow Discord guidelines:</strong> Adhere to Discord's guidelines and TOS to avoid being banned.</li>
-            <li>🚩 <strong>Inappropriate or offensive usernames:</strong> If your username or server nickname is inappropriate or offensive, your name and profile picture will be hidden and replaced with temporary defaults. Changing to a non-flagged name can take up to 24 hours or longer to revert to normal.</li>
-        </ul>
+  <div class="main-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="header-text">
+            <span class="category">Guidelines</span>
+            <h2>Bot Rules</h2>
+            <p>Please follow these rules to ensure a safe and enjoyable experience for everyone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <h3>Strike System</h3>
-        <ul>
-            <li>If a user is reported for bad behavior on the bot, they will receive a warning strike via DM detailing the reason for the strike.</li>
-            <li>Accumulating three warning strikes will result in an automatic ban from the bot.</li>
-            <li>In cases of extreme offenses, the strike system may be bypassed, leading to an immediate ban without prior warning strikes.</li>
-            <li>Warning strikes may be removed at the discretion of a moderator.</li>
-        </ul>
-    </main>
-    <footer>
-        <p>&copy; 2024 Phonebooth. All rights reserved.</p>
-    </footer>
-</body>
+  <div class="content-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6>Guidelines</h6>
+            <h2>Phonebooth Bot Rules</h2>
+            <p>Follow these rules to maintain a safe and positive environment</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="content-item">
+            <h3>Fundamental Rules</h3>
+            <ul>
+              <li><strong>Please open a ticket</strong> If you are having an issue regarding the bot, do not dm staff.</li>
+              <li><strong>NO NSFW topics:</strong> Strictly prohibited.</li>
+              <li><strong>NO nsfw usernames or profiles:</strong> This goes back to our no NSFW rule we are strictly sfw and will not allow any accounts with suggestive, nsfw, inappropriate or offensive usernames/profiles on our bot.</li>
+              <li><strong>Safety first:</strong> No flirting or "E-Dating" due to Discord's 13+ age requirement.</li>
+              <li><strong>NO mentions or discussions of illegal/offensive activity:</strong> This includes drug abuse/activity, theft, substance use, piracy and everything alike.</li>
+              <li><strong>Personal info:</strong> Do not share personal information, including your location or phone number.</li>
+              <li><strong>Racism, homophobia, ableism, transphobia & derogatory behavior</strong> is <u><strong>not</strong></u> tolerated here & will lead to a <u>instant ban</u>.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <div class="content-item">
+            <h3>Conduct Guidelines</h3>
+            <ul>
+              <li><strong>Mutual respect:</strong> Please remember to treat others how you want to be treated, do not engage in bullying, hate speech or coordinating server raids to target a specific person or community.</li>
+              <li><strong>Avoid controversial or sensitive topics:</strong> Certain topics such as religious beliefs, politics, war, violence, death, self harm and mental illness.</li>
+              <li><strong>No toxicity:</strong> We like to avoid mellow dramatic drama or any toxicity period. This assures everyone stays happy.</li>
+              <li><strong>No spamming:</strong> This includes spam pinging.</li>
+              <li><strong>No sending harmful links and doxxing:</strong> Sending harmful links/phishing links, doxing and discussion of doing so is prohibited and will result in an immediate ban.</li>
+              <li><strong>False reports:</strong> Do not falsely report users to ensure effective rule enforcement.</li>
+              <li><strong>Invite links:</strong> No Discord invite links in chat; use DMs if requested.</li>
+              <li><strong>Self-harm/suicide:</strong> Mentions of self-harm & suicide are forbidden to maintain a safe and happy environment.</li>
+              <li><strong>Follow Discord guidelines:</strong> Adhere to Discord's guidelines and TOS to avoid being banned.</li>
+              <li>🚩 <strong>Inappropriate or offensive usernames:</strong> If your username or server nickname is inappropriate or offensive, your name and profile picture will be hidden and replaced with temporary defaults. Changing to a non-flagged name can take up to 24 hours or longer to revert to normal.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="content-item">
+            <h3>Strike System</h3>
+            <ul>
+              <li>If a user is reported for bad behavior on the bot, they will receive a warning strike via DM detailing the reason for the strike.</li>
+              <li>Accumulating three warning strikes will result in an automatic ban from the bot.</li>
+              <li>In cases of extreme offenses, the strike system may be bypassed, leading to an immediate ban without prior warning strikes.</li>
+              <li>Warning strikes may be removed at the discretion of a moderator.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>&copy; 2025 Phonebooth. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
 </html>
