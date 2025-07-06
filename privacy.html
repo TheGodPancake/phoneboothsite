@@ -127,29 +127,50 @@
                 background: rgba(255,255,255,0.95);
                 backdrop-filter: blur(10px);
                 flex-direction: column;
-                padding: 20px;
+                padding: 25px 20px; /* Increased padding */
                 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
                 border-radius: 0 0 15px 15px;
                 z-index: 1000;
                 margin-top: 10px;
+                transform: translateY(-10px);
+                opacity: 0;
+                transition: all 0.3s ease;
+                gap: 15px; /* Increased gap between menu items */
             }
             
             .header-area .main-nav .nav.show {
                 display: flex;
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            .header-area .main-nav .nav li {
+                width: 100%;
+                margin: 0; /* Remove default margin */
             }
             
             .header-area .main-nav .nav li a {
                 color: var(--chefchaouen-blue);
-                margin: 5px 0;
-                padding: 12px 20px;
-                background: rgba(255,255,255,0.8);
-                border: 1px solid rgba(82, 150, 241, 0.3);
+                margin: 0; /* Remove margin to prevent overlap */
+                padding: 18px 25px; /* Increased padding for better touch targets */
+                background: rgba(255,255,255,0.9);
+                border: 2px solid rgba(82, 150, 241, 0.3);
+                transform: translateX(0);
+                transition: all 0.3s ease;
+                width: 100%;
+                box-sizing: border-box;
+                border-radius: 12px; /* Increased border radius */
+                text-align: center; /* Center text */
+                font-weight: 600;
+                font-size: 1.05em;
             }
             
             .header-area .main-nav .nav li a:hover,
             .header-area .main-nav .nav li a.active {
                 background: var(--chefchaouen-blue);
                 color: white;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(82, 150, 241, 0.3);
             }
             
             .menu-trigger {
