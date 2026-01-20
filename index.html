@@ -218,6 +218,43 @@
 
         .menu-trigger {
             display: none;
+            position: relative;
+            width: 40px;
+            height: 40px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            padding: 0;
+            z-index: 1001;
+        }
+        
+        .menu-trigger span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+        
+        .menu-trigger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+        
+        .menu-trigger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .menu-trigger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        
+        .header-area.scrolled .menu-trigger span {
+            background: var(--chefchaouen-blue);
         }
 
         /* Main Banner */
@@ -756,24 +793,45 @@
 
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
-            .header-area .main-nav .nav {
-                display: none;
-                position: absolute;
-                top: 100%;
+            .header-area {
+                position: fixed;
+                top: 0;
                 left: 0;
                 right: 0;
-                background: rgba(255,255,255,0.95);
-                backdrop-filter: blur(10px);
+            }
+            
+            .header-area .main-nav {
+                padding: 15px 0;
+            }
+            
+            .header-area .main-nav .logo h1 {
+                font-size: 1.8em;
+            }
+            
+            .header-area .main-nav .nav {
+                display: none;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: rgba(255,255,255,0.98);
+                backdrop-filter: blur(20px);
                 flex-direction: column;
-                padding: 25px 20px; /* Increased padding */
-                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-                border-radius: 0 0 15px 15px;
-                z-index: 1000;
-                margin-top: 10px;
-                transform: translateY(-10px);
+                padding: 20px 15px 30px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                border-radius: 0 0 20px 20px;
+                z-index: 998;
+                max-height: calc(100vh - 70px);
+                overflow-y: auto;
+                transform: translateY(-100%);
                 opacity: 0;
-                transition: all 0.3s ease;
-                gap: 15px; /* Increased gap between menu items */
+                transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                gap: 12px;
+            }
+            
+            .header-area.scrolled .main-nav .nav {
+                top: 65px;
+                max-height: calc(100vh - 65px);
             }
             
             .header-area .main-nav .nav.show {
@@ -784,53 +842,80 @@
             
             .header-area .main-nav .nav li {
                 width: 100%;
-                margin: 0; /* Remove default margin */
+                margin: 0;
+                animation: slideIn 0.3s ease forwards;
+                opacity: 0;
+            }
+            
+            .header-area .main-nav .nav.show li:nth-child(1) { animation-delay: 0.1s; }
+            .header-area .main-nav .nav.show li:nth-child(2) { animation-delay: 0.15s; }
+            .header-area .main-nav .nav.show li:nth-child(3) { animation-delay: 0.2s; }
+            .header-area .main-nav .nav.show li:nth-child(4) { animation-delay: 0.25s; }
+            .header-area .main-nav .nav.show li:nth-child(5) { animation-delay: 0.3s; }
+            .header-area .main-nav .nav.show li:nth-child(6) { animation-delay: 0.35s; }
+            .header-area .main-nav .nav.show li:nth-child(7) { animation-delay: 0.4s; }
+            
+            @keyframes slideIn {
+                from {
+                    opacity: 0;
+                    transform: translateX(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
             }
             
             .header-area .main-nav .nav li a {
                 color: var(--chefchaouen-blue);
-                margin: 0; /* Remove margin to prevent overlap */
-                padding: 18px 25px; /* Increased padding for better touch targets */
-                background: rgba(255,255,255,0.9);
-                border: 2px solid rgba(82, 150, 241, 0.3);
-                transform: translateX(0);
+                margin: 0;
+                padding: 16px 20px;
+                background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(197,245,253,0.3));
+                border: 2px solid rgba(82, 150, 241, 0.2);
                 transition: all 0.3s ease;
                 width: 100%;
                 box-sizing: border-box;
-                border-radius: 12px; /* Increased border radius */
-                text-align: center; /* Center text */
+                border-radius: 12px;
+                text-align: center;
                 font-weight: 600;
-                font-size: 1.05em;
+                font-size: 1em;
+                display: block;
             }
             
             .header-area .main-nav .nav li a:hover,
             .header-area .main-nav .nav li a.active {
-                background: var(--chefchaouen-blue);
+                background: linear-gradient(135deg, var(--chefchaouen-blue), var(--celestial-blue));
                 color: white;
-                transform: translateY(-2px);
-                box-shadow: 0 4px 12px rgba(82, 150, 241, 0.3);
+                transform: scale(1.02);
+                box-shadow: 0 6px 20px rgba(82, 150, 241, 0.4);
+                border-color: transparent;
             }
             
             .menu-trigger {
-                display: block;
-                color: white;
-                font-weight: 600;
-                cursor: pointer;
-                padding: 10px 15px;
-                border: 2px solid rgba(255,255,255,0.3);
-                border-radius: 8px;
-                transition: all 0.3s ease;
-                background: rgba(255,255,255,0.1);
+                display: flex;
             }
             
-            .menu-trigger:hover {
-                background: rgba(255,255,255,0.2);
-                border-color: rgba(255,255,255,0.5);
-                transform: translateY(-1px);
+            /* Add overlay when menu is open */
+            body.menu-open::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.4);
+                z-index: 997;
+                opacity: 0;
+                animation: fadeIn 0.3s forwards;
+            }
+            
+            @keyframes fadeIn {
+                to { opacity: 1; }
             }
             
             .main-banner {
-                padding: 120px 0 80px;
+                padding: 140px 0 80px;
+                margin-top: 0;
             }
             
             .main-banner .header-text h2 {
@@ -1033,9 +1118,11 @@
                           <li><a href="privacy.html">Privacy</a></li>
                           <li><a href="bot-rules.html">Rules</a></li>
                         </ul>   
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
+                        <button class='menu-trigger' aria-label=\"Toggle menu\">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
                         <!-- ***** Menu End ***** -->
                     </div>
                 </nav>
@@ -1602,22 +1689,53 @@
       const nav = document.querySelector('.header-area .main-nav .nav');
       
       if (menuTrigger && nav) {
-        menuTrigger.addEventListener('click', function() {
-          nav.classList.toggle('show');
+        menuTrigger.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const isOpen = nav.classList.contains('show');
+          
+          if (isOpen) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
         });
+        
+        function openMenu() {
+          nav.classList.add('show');
+          menuTrigger.classList.add('active');
+          document.body.classList.add('menu-open');
+          // Prevent body scroll on mobile when menu is open
+          document.body.style.overflow = 'hidden';
+        }
+        
+        function closeMenu() {
+          nav.classList.remove('show');
+          menuTrigger.classList.remove('active');
+          document.body.classList.remove('menu-open');
+          document.body.style.overflow = '';
+        }
         
         // Close menu when clicking on a link
         const navLinks = nav.querySelectorAll('a');
         navLinks.forEach(link => {
           link.addEventListener('click', function() {
-            nav.classList.remove('show');
+            closeMenu();
           });
         });
         
-        // Close menu when clicking outside
+        // Close menu when clicking outside or on overlay
         document.addEventListener('click', function(event) {
-          if (!menuTrigger.contains(event.target) && !nav.contains(event.target)) {
-            nav.classList.remove('show');
+          if (nav.classList.contains('show') && 
+              !menuTrigger.contains(event.target) && 
+              !nav.contains(event.target)) {
+            closeMenu();
+          }
+        });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape' && nav.classList.contains('show')) {
+            closeMenu();
           }
         });
       }
