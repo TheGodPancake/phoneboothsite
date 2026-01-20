@@ -111,6 +111,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-direction: column;
+        }
+        
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
         }
 
         .menu-trigger {
@@ -168,13 +176,6 @@
             
             .header-area .main-nav .logo h1 {
                 font-size: 1.8em;
-            }
-            
-            .main-nav .container {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 100%;
             }
             
             .header-area .main-nav .nav {
@@ -769,11 +770,18 @@
             <div class="col-12">
                 <nav class="main-nav">
                     <div class="container">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            <h1>Phonebooth</h1>
-                        </a>
-                        <!-- ***** Logo End ***** -->
+                        <div class="nav-wrapper">
+                            <!-- ***** Logo Start ***** -->
+                            <a href="index.html" class="logo">
+                                <h1>Phonebooth</h1>
+                            </a>
+                            <!-- ***** Logo End ***** -->
+                            <button class='menu-trigger' aria-label="Toggle menu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                           <li><a href="index.html">Home</a></li>
@@ -784,11 +792,6 @@
                           <li><a href="privacy.html">Privacy</a></li>
                           <li><a href="bot-rules.html">Rules</a></li>
                         </ul>   
-                        <button class='menu-trigger' aria-label="Toggle menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
                         <!-- ***** Menu End ***** -->
                     </div>
                 </nav>
